@@ -1,0 +1,19 @@
+Roses are red,
+Violets are blue,
+I tried to debug,
+Now nothing's new.
+
+My code was broken,
+Stack overflow's spoken,
+I added more logs,
+And woke up some frogs.
+
+Console.log said,
+"undefined," it read,
+I cried and I screamed,
+Then woke from my dream.
+
+The bug was in me,
+Not the machinery,
+Coffee helped out,
+No longer in doubt!

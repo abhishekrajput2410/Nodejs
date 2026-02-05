@@ -1,6 +1,16 @@
-import { add } from "./utils.js";
-import { subtract } from "./utils.js";
-const result = add(2, 3);
-const result1 = subtract(5, 2); 
-console.log("The sum is:", result);
-console.log("The difference is:", result1);
+import {error} from "console";
+import fs from "fs";
+import path from "path";
+
+const filePath = 'D:\\Summer\\NodeJS\\Lecture\\file.txt';
+
+const dynamicPath = path.join('D:','Summer', 'NodeJS', 'Lecture', 'file.txt');
+console.log("Dynamic Path:", dynamicPath);
+
+fs.readFile(filePath, 'utf8', (err, data) => {
+    console.log(data);
+    
+});
+
+const absolutePath = path.resolve('file.txt');
+console.log("Absolute Path:", absolutePath);

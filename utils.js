@@ -1,8 +1,11 @@
-export function add(a, b) {
-    return a + b;
-};
-export function subtract(a, b) {
+const sub = (a, b) => {
     return a - b;
 };
+const divide = (a, b) => {
+    return a / b;
+};
+const square = (a) => {
+    return a * a;
+}
 
-export default { add, subtract };
+module.exports = { sub, divide, square };

@@ -15,14 +15,17 @@
 // const absolutePath = path.resolve('file.txt');
 // console.log("Absolute Path:", absolutePath);
 
-const { sub, divide, square  } = require('./utils.js');
+// const { sub, divide, square  } = require('./utils.js');
 
-const functions = {
-    sub,
-    divide,
-    square
-}
+// const functions = {
+//     sub,
+//     divide,
+//     square
+// }
  
-console.log("sub:", functions.sub(2,3));
-console.log("divide:", functions.divide(2,3));
-console.log("square:", functions.square(11));
+// console.log("sub:", functions.sub(2,3));
+// console.log("divide:", functions.divide(2,3));
+// console.log("square:", functions.square(11));
+
+
+

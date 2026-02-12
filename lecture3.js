@@ -1,13 +1,15 @@
 const a = () => {
+    setTimeout(() => {
+        console.log("Function 1");
+    },10000);
+    setTimeout(() => {
+        console.log("Function 2");
+    },0);
     b();
-    console.log("Hello World");
+    console.log("Heyyy!");
 }
 const b = () => {
-    c();
     console.log("How Are You?");
-}
-const c = () => {
-    console.log("How's It Going?");
 }
 a();
 

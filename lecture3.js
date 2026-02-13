@@ -1,17 +1,34 @@
+// const a = () => {
+//     setTimeout(() => {
+//         console.log("Function 1");
+//     },10000);
+//     setTimeout(() => {
+//         console.log("Function 2");
+//     },0);
+//     b();
+//     console.log("Heyyy!");
+// }
+// const b = () => {
+//     console.log("How Are You?");
+// }
+// a();
 const a = () => {
-    setTimeout(() => {
-        console.log("Function 1");
-    },10000);
-    setTimeout(() => {
-        console.log("Function 2");
-    },0);
-    b();
-    console.log("Heyyy!");
 }
 const b = () => {
-    console.log("How Are You?");
-}
+    setTimeout(() => {
+        console.log("Function 1");
+    },0);
+    console.log("~b ~ b:");
+
+    Promise.resolve().then(() => {
+        console.log("Function 2");
+    });
+    Promise.resolve().then(() => {
+        console.log("Function 3");
+    });
+};
 a();
+b();
 
 // Empty Stack
 

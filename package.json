@@ -5,10 +5,10 @@
   "license": "ISC",
   "author": "",
   "type": "commonjs",
-  "main": "lecture1.js",
+  "main": "lecture4.js",
   "scripts": {
-    "start": "node lecture3.js",
-    "dev": "nodemon lecture3.js"
+    "start": "node lecture4.js",
+    "dev": "nodemon lecture4.js"
   },
   "dependencies": {
     "express": "^5.2.1"

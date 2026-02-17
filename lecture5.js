@@ -16,17 +16,27 @@
 // const num1 = Number(process.argv[3]); // This will convert the string argument to a number.
 // const num2 = Number(process.argv[4]); // This will convert the string argument to a number.
 
-const [ , , functionName, num1, num2 ] = process.argv;
+// const [ , , functionName, num1, num2 ] = process.argv;
+// const a = Number(num1);
+// const b = Number(num2);
 
-const a = Number(num1);
-const b = Number(num2);
+// if (functionName === "add") {
+//     console.log("Result:", a + b);
+// } 
+// else if (functionName === "multiply") {
+//     console.log("Result:", a * b);
+// } 
+// else {
+//     console.log("Unknown function");
+// }
 
-if (functionName === "add") {
-    console.log("Result:", a + b);
-} 
-else if (functionName === "multiply") {
-    console.log("Result:", a * b);
-} 
-else {
-    console.log("Unknown function");
-}
+
+const http = require("http");
+
+const server = http.createServer((request, response) =>{
+    console.log("Received request:", request.url);
+    response.end("Hello, this is a response from the server!");
+    });
+server.listen(3000, () => {
+    console.log("Server is running on port 3000");
+});

@@ -31,12 +31,43 @@
 // }
 
 
-const http = require("http");
+// const http = require("http");
 
-const server = http.createServer((request, response) =>{
-    console.log("Received request:", request.url);
-    response.end("Hello, this is a response from the server!");
-    });
+// const server = http.createServer((request, response) =>{
+//     console.log("Received request:", request.url);
+//     response.end("Hello, this is a response from the server!");
+//     });
+// server.listen(3000, () => {
+//     console.log("Server is running on port 3000");
+// });
+
+const http = require("http");
+const fs = require("fs");
+
+const server = http.createServer((request, response) => {
+    fs.writeFileSync("log.txt", `[${new Date().toISOString()}] ${request.url}\n`, { flag: "a" });
+    
+    if (request.url === "/" || request.url === "/home") {
+        response.end("Welcome to Home Page!");
+    } else if (request.url === "/about") {
+        response.end("This is About Page");
+    }
+    else if (request.url === "/contact") {
+        response.end("This is Contact Page");
+    }
+    else if (request.url === "/services") {
+        response.end("This is Services Page");
+    }
+    else if(request.url === "/products") {
+        response.end("This is Products Page");
+    } 
+    else {
+        response.statusCode = 404;
+        response.end("Page Not Found");
+    }
+});
+
 server.listen(3000, () => {
     console.log("Server is running on port 3000");
+    
 });
